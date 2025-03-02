@@ -1,0 +1,230 @@
+.node{
+    background-color : black;
+    border-radius : 10px;
+    width : 10px;
+    height : 10px;
+    position : absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.StaticCircuitComponent{
+    cursor : pointer;
+}
+
+.Resistor{
+    background-image : url('components/images/resistor.png');
+    width: 41px;
+    height: 80px;
+}
+
+.Capacitor{
+    background-image : url('components/images/capacitor.png');
+    width: 41px;
+    height: 80px;
+}
+
+.DCCurrent{
+    background-image : url('components/images/DCCurrent.png');
+    /* background-size: 41px 80px; */
+    width: 41px;
+    height: 80px;
+}
+
+.VoltageSource{
+    background-image : url('components/images/VoltageSource.png');
+    width: 41px;
+    height: 80px;
+}
+
+.Inductor{
+    background-image: url('components/images/inductor.png');
+    width: 41px;
+    height: 80px;
+}
+
+.Ground{
+    background-image: url('components/images/ground.png');
+    width: 41px;
+    height: 41px;
+}
+
+.CircuitComponent{
+    cursor : pointer;
+    position : absolute;
+}
+
+.wire {
+    position: absolute;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+
+div:active {
+    background-color: rgb(19, 122, 163);
+}
+
+.node:hover{
+    background-color: rgb(19, 122, 163);
+}
+
+.wire:hover{
+    border-top: 3px solid blue;
+    border-left: 3px solid blue;
+}
+
+body {
+	user-select: none;
+    background-size: 20px 20px;
+    background-image:
+    linear-gradient(to right, rgb(189, 189, 193) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(189, 189, 193) 1px, transparent 1px);
+}
+
+.grid-container {
+    padding : 10px;
+    border-radius: 10px;
+    position: absolute;
+    height: 70vh;
+    overflow-y: auto;
+    width : 160px;
+    top: 100px;
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: repeat(3, 1fr); 
+    background-color: #008080;
+    grid-auto-rows: 90px;
+    grid-gap: 10px;
+    opacity: 90%;
+}
+
+.closingButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  word-wrap: normal;
+  /* Position the tooltip text - see examples below! */
+  position: fixed;
+  z-index: 11;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+/* The actual popup */
+.modifyBox .modifyBoxText {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.modifyBox .modifyBoxText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.modifyBox .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#bottombar{
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #C0C0C0;
+    height: 40px;
+}
+
+#playbutton{
+    position: absolute;
+    background-image: url('components/images/play.png');
+    height: 40px;
+    width: 40px;
+    left: 1%;
+}
+
+#simtime{
+    position: absolute;
+    left: 5%;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.link{
+    position: absolute;
+    left: 90%;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #569CD6;
+    padding: 0;
+}
+
+#simulationOk{
+    position: absolute;
+    left: 95%;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    padding: 0;
+    transform: translateY(30%);
+    background-color: #02FF00;
+}
+
+#simulationOk.notOk{
+    background-color: #FF0000;
+}
